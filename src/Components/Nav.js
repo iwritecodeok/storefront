@@ -4,7 +4,11 @@ import './../Styles/Nav.scss';
 import {Link} from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import LocalGroceryStoreOutlinedIcon from '@material-ui/icons/LocalGroceryStoreOutlined';
+import {useStateValue} from '../StateProvider';
+
 function Nav() {
+    const [{ cart }] = useStateValue();
+    console.log(cart);
     return (
         <nav className="navBar">
         <Link to="/" className="logo_link">
@@ -32,13 +36,13 @@ function Nav() {
             <Link to="/login" className="navBar__link">
             <div className="navBar__option">
             <span className='nav__optionLineOne'>Your</span>
-            <span className='nav__optionLineTwo'>Prime</span>
+            <span className='nav__optionLineTwo'>Slime</span>
             </div>
             </Link>
             <Link to="/checkout" className="navBar__link">
                 <div className="nav__basket">
                 <LocalGroceryStoreOutlinedIcon/>
-                <span className="nav_optionLineTwo nav__basketCount">0</span>
+                <span className="nav_optionLineTwo nav__basketCount">{cart?.length}</span>
                 </div>
             </Link>
         </div>

@@ -53,11 +53,16 @@
             }
         }
         .nav__basket{
-            display:flex;
+            display: flex;
+            flex-direction: column-reverse;
             align-items: center;
+
             .nav__basketCount{
-                margin-left:10px;
-                margin-right:10px;
+                font-weight: 600;
+                color: #febd69;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: -13px;
             }
         }
     }

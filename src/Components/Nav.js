@@ -3,7 +3,7 @@ import Logo from '../Assets/shamazon-logo.png';
 import './../Styles/Nav.scss';
 import {Link} from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
-import BasketIcon from '@material-ui/icons/ShoppingCart';
+import LocalGroceryStoreOutlinedIcon from '@material-ui/icons/LocalGroceryStoreOutlined';
 function Nav() {
     return (
         <nav className="navBar">
@@ -37,7 +37,7 @@ function Nav() {
             </Link>
             <Link to="/checkout" className="navBar__link">
                 <div className="nav__basket">
-                <BasketIcon/>
+                <LocalGroceryStoreOutlinedIcon/>
                 <span className="nav_optionLineTwo nav__basketCount">0</span>
                 </div>
             </Link>

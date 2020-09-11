@@ -11,7 +11,22 @@ const reducer = (state, action) => {
                 cart: [...state.cart, action.item],
             };
         case 'REMOVE_FROM_CART':
-            return {state}
+            //clone cart
+            let newCart = [...state.cart];
+            //find index of desired item
+            const index = state.cart.findIndex((cartItem) => cartItem.id === action.id);
+            if (index >= 0){
+                // item exists remove  it
+                newCart.splice(index, 1);
+            }else{
+                console.warn(
+                    `Cant remove product (id: ${action.id}) as its not in state`
+                )
+            }
+            return {
+                ...state,
+                cart: newCart,
+            };
         default:
             return state;
     }

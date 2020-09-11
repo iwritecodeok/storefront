@@ -1,0 +1,31 @@
+@import './colors';
+.checkoutItem__image{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+.checkoutItem{
+    display:flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    .checkoutItem__info{
+        padding-left:20px;
+        display: flex;
+        flex-flow: column;
+    }
+    .checkoutItem__title{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .checkout__rating{
+        display: flex;
+    }
+    .checkoutItem__button{
+            max-width: 170px;
+            background-color:$shamazonOrange;
+            border: 1px solid;
+            border-color: #a88734 #9c7e31 #846a29;
+        
+    }
+}

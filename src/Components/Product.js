@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Styles/Product.scss';
-import {useStateValue} from '../StateProvider';
+import { useStateValue } from '../StateProvider';
 
 
 function Product({id, title, image, price, rating}) {
-    const [{ }, dispatch] = useStateValue();
+    const [{cart}, dispatch] = useStateValue();
 
 const addToCart =()=>{
 // dispatch item to basket

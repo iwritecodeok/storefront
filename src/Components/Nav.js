@@ -1,9 +1,9 @@
 import React from 'react';
 import Logo from '../Assets/shamazon-logo.png';
 import './../Styles/Nav.scss';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
-import BasketIcon from '@material-ui/icons/ShoppingBasket'
+import BasketIcon from '@material-ui/icons/ShoppingCart';
 function Nav() {
     return (
         <nav className="navBar">

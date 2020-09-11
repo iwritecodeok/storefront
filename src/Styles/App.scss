@@ -1,4 +1,8 @@
+@import './colors';
 *{
   /* react adds about 10px of margin setting to zero gets rid of it */
   margin: 0;
+}
+.app{
+  background-color:$shamazonGray;
 }

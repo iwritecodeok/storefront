@@ -2,12 +2,63 @@
 
 .navBar{
     background-color: $shamazonBlk;
+    display:flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     .navBar__logo{
         width: 100px;
+        object-fit: contain;
         margin-top: 20px;
         margin-bottom: 10px;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .navBar__searchContainer{
+        display: flex;
+        flex:1;
+        .navBar__input{
+            height:12px;
+            padding:10px;
+            border: none;
+            width:100%;
+        }
+        .navBar__searchIcon{
+            background: $shamazonOrange;
+            padding:5px;
+            height:22px !important;
+        }
+    }
+    .navBar__nav{
+        display:flex;
+        justify-content: space-evenly;
+        
+        .navBar__link{
+            color:white;
+            text-decoration: none;
+        }
+        .navBar__option{
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            margin-right: 10px;
+            .nav__optionLineOne{
+                font-size: 10px;
+            }
+            .nav__optionLineTwo{
+                font-size: 13px;
+                font-weight: 800;
+            }
+        }
+        .nav__basket{
+            display:flex;
+            align-items: center;
+            .nav__basketCount{
+                margin-left:10px;
+                margin-right:10px;
+            }
+        }
     }
 }
 

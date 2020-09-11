@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from '../Assets/shamazon-logo.png';
-import './Nav.css';
+import './../Styles/Nav.scss';
 
 function Nav() {
     return (
@@ -10,6 +10,8 @@ function Nav() {
         src={Logo} 
         alt=""/>
         {/* search box */}
+        
+        {/* <input></input> */}
         {/*  3 links */}
         {/* basket with number */}
         </nav>

@@ -7,9 +7,11 @@ import BasketIcon from '@material-ui/icons/ShoppingBasket'
 function Nav() {
     return (
         <nav className="navBar">
+        <Link to="/" className="logo_link">
         <img className="navBar__logo" 
         src={Logo} 
         alt=""/>
+        </Link>
         <div className="navBar__searchContainer">
         <input type="text" className="navBar__input"/>
         <SearchIcon className="navBar__searchIcon"/>

@@ -1,9 +1,10 @@
-import { ShoppingBasket } from '@material-ui/icons';
 import React from 'react'
 import { useStateValue } from "../StateProvider";
 import '../Styles/Checkout.scss';
 import CheckoutItem from './CheckoutItem';
 import '../Styles/Checkout.scss'
+import Subtotal from "./Subtotal"
+
 function Checkout() {
     const[{ cart }] = useStateValue();
     return (
@@ -36,7 +37,7 @@ function Checkout() {
         {cart.length > 0 &&(
         <div className="checkout__right">
         {/* subtotal */}
-        <h1>Subtotal</h1>
+        <Subtotal/>
         </div>
         )}
 

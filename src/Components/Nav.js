@@ -5,9 +5,15 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import LocalGroceryStoreOutlinedIcon from "@material-ui/icons/LocalGroceryStoreOutlined";
 import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
 
 function Nav() {
-  const [{ cart }] = useStateValue();
+  const [{ cart, user }] = useStateValue();
+  const login = () =>{
+    if (user){
+      auth.signOut();
+    }
+  }
   console.log(cart);
   return (
     <nav className="navBar">
@@ -20,12 +26,12 @@ function Nav() {
       </div>
       <div className="navBar__nav">
         <Link to="/login" className="navBar__link">
-          <div className="navBar__option">
-            <span className="nav__optionLineOne">Hello,</span>
-            <span className="nav__optionLineTwo">Sign in</span>
+          <div onClick={login} className="navBar__option">
+  <span className="nav__optionLineOne">Hello, {user?.email}</span>
+            <span className="nav__optionLineTwo">{user ? 'Sign Out' : 'Sign in'}</span>
           </div>
         </Link>
-        <Link to="/login" className="navBar__link">
+        <Link to={ !user && "/login"} className="navBar__link">
           <div className="navBar__option">
             <span className="nav__optionLineOne">Returns</span>
             <span className="nav__optionLineTwo">& Orders</span>

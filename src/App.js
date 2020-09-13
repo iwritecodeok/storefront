@@ -5,6 +5,7 @@ import NavBar from "./Components/Nav";
 import Home from "./Components/Home";
 import Checkout from "./Components/Checkout";
 import Login from "./Components/Login";
+import Registration from "./Components/Registration"
 import { useStateValue } from "./StateProvider";
 import { auth } from './firebase';
 
@@ -47,6 +48,9 @@ console.log("USER HERE >>>>>>", user)
           </Route>
           <Route path="/login">
             <Login/>
+          </Route>
+          <Route path="/registration">
+            <Registration/>
           </Route>
           <Route path="/">
             <NavBar />

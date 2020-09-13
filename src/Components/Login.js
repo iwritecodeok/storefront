@@ -21,17 +21,17 @@ function Login() {
     .catch((e)=> alert(e.message))
     }
 
-    const register = e =>{
-        e.preventDefault();
+    // const register = e =>{
+    //     e.preventDefault();
 
-        auth
-        .createUserWithEmailAndPassword(email, password)
-        .then((auth)=>{
-            //created a user and logged in redirect to home
-        })
-        .catch((e)=> alert(e.message))
+    //     auth
+    //     .createUserWithEmailAndPassword(email, password)
+    //     .then((auth)=>{
+    //         //created a user and logged in redirect to home
+    //     })
+    //     .catch((e)=> alert(e.message))
 
-    }
+    // }
 
     return (
         <div className="login">
@@ -54,10 +54,11 @@ function Login() {
                 </button>
                 </form>
                 <p>
-                    By continuing, you agree to shAmazon's Conditions of Use and Privacy Notice.
+                    New to shAmazon?
                 </p>
-                
-                <button onClick={ register } className="login__signUp">Create your shAmazon Account</button>
+                <Link to='/registration'>
+                <button className="login__signUp">Create your shAmazon Account</button>
+                </Link>
             </div>
         </div>
     )

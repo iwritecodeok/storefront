@@ -14,7 +14,6 @@ function Nav() {
       auth.signOut();
     }
   }
-  console.log(cart);
   return (
     <nav className="navBar">
       <Link to="/" className="logo_link">

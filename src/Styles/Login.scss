@@ -19,18 +19,21 @@
         flex-direction: column;
         padding: 20px;
         border: 1px solid lightgray;
+        border-radius: 2px;
         h1{
             font-weight: 500;
             margin-bottom: 20px;
         }
         h5{
             margin-bottom:5px;
+            font-weight: 600;
         }
         input{
-            height:30px;
-            margin-bottom:10px;
-            background-color:white;
+            height: 30px;
+            margin-bottom: 10px;
+            background-color: white;
             width: 98%;
+            border: 1px solid #a6a6a6;
         }
         p{
             margin-top:15px;

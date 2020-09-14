@@ -15,7 +15,7 @@ function Home() {
         <Product
           id="123456771"
           title="Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7) - Space Gray"
-          price={2089.99}
+          price={2088.99}
           rating={5}
           image="https://images-na.ssl-images-amazon.com/images/I/71pC69I3lzL._AC_SL1500_.jpg"
         />
@@ -55,7 +55,7 @@ function Home() {
         <Product
           id="123456776"
           title="Bose QuietComfort 15 Acoustic Noise Cancelling Headphones"
-          price={600.01}
+          price={600.99}
           rating={4}
           image="https://images-na.ssl-images-amazon.com/images/I/61DM41H3cFL._AC_SL1200_.jpg"
         />

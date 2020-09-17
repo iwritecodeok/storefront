@@ -3,9 +3,11 @@ import "../Styles/Subtotal.scss";
 import CurrencyFormat from "react-currency-format";
 import { useStateValue } from "../StateProvider";
 import { getCartTotal } from "../reducer";
+import { Link, useHistory } from "react-router-dom";
 
 function Subtotal() {
-  const [{ cart }] = useStateValue();
+  const history = useHistory();
+  const [{ cart }, dispatch] = useStateValue();
   return (
     <div className="subtotal">
       {/* price */}
@@ -27,7 +29,14 @@ function Subtotal() {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button className="subtotal__button">proceed to checkout</button>
+      <button
+        className="subtotal__button"
+        onClick={(e) => {
+          history.push("/payment");
+        }}
+      >
+        proceed to checkout
+      </button>
     </div>
   );
 }

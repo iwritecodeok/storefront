@@ -26,7 +26,7 @@ function Nav() {
       <div className="navBar__nav">
         <Link to="/login" className="navBar__link">
           <div onClick={login} className="navBar__option">
-  <span className="nav__optionLineOne">Hello, {user?.email}</span>
+  <span className="nav__optionLineOne">Hello, {user ? user.email : 'Guest'}</span>
             <span className="nav__optionLineTwo">{user ? 'Sign Out' : 'Sign in'}</span>
           </div>
         </Link>

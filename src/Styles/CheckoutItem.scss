@@ -19,13 +19,16 @@
         font-weight: 600;
     }
     .checkout__rating{
+        margin-top: 3px;
         display: flex;
     }
     .checkoutItem__button{
-            max-width: 170px;
-            background-color:$shamazonOrange;
-            border: 1px solid;
-            border-color: #a88734 #9c7e31 #846a29;
+        margin-top: 47px;
+        max-width: 170px;
+        background-color: #febd69;
+        border-color: #a88734 #9c7e31 #846a29;
+        border-style: solid;
+        border-width: 1px;
         
     }
 }

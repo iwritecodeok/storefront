@@ -1,15 +1,19 @@
 @import './colors';
 
 .subtotal{
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
-    height:108px;
+    height: 108px;
     padding: 28px;
     background-color: #f3f3f3;
     border: 1px solid #dddddd;
     border-radius: 3px;
+    position: sticky;
+    top: 105px;
+    z-index: 100;
+
     .subtotal__gift{
         display: flex;
         align-items: center;
